@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // player score and cpu score
+        let playerScore = 0;
+        let cpuScore = 0;
+
+        // Write function Computer choice
+        // variable cpuChoice contain or/and return str "R|P|S"
+        function cpuChoice(){
+            let rps = ["Rock","Paper","Scissor"];
+            return rps[Math.floor(Math.random()* 3)];
+        }
+        
+        // Write function to get user choice
+        // variable contain and return user input for "R|P|S"
+        function userChoice(){
+            while(1){
+                ask = prompt("What's your choice? Rock? Paper? Scissor?: ");
+                return ask;
+            }
+        }
+
+        // main function have a logic to compare and play a round
+        function playRound(userChoice, cpuChoice) {
+            userSelected = userChoice;
+            cpuSelected = cpuChoice;
+        }
+
+        // rock > scissor > paper > rock and so on
+        // game will play 5 rounds, need logic for that
+    </script>
+</body>
+</html>
