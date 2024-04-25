@@ -82,8 +82,15 @@
                 console.log("CPU Score: " + cpuScore);
                 console.log(" ");
             }
+            if(userScore === cpuScore){
+                console.log("Its a Tie game! see ya later!");
+            } else if(userScore > cpuScore){
+                console.log("User Win! Congrat!");
+            } else if(userScore < cpuScore){
+                console.log("Skynet ruled.. Better luck next time!");
+            }
         }
-        
+        main();
     </script>
 </body>
 </html>
