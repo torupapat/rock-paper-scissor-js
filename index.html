@@ -8,7 +8,7 @@
 <body>
     <script>
         // player score and cpu score
-        let playerScore = 0;
+        let userScore = 0;
         let cpuScore = 0;
 
         // Write function Computer choice
@@ -29,11 +29,23 @@
 
         // main function have a logic to compare and play a round
         function playRound(userChoice, cpuChoice) {
-            userSelected.toLowerCase(userChoice);
+            let userSelected = userChoice.toLowerCase();
             let cpuSelected = cpuChoice;
             let result = gameComparer(userSelected,cpuSelected);
-            
+            if(result === "Tie"){
+                console.log("It's a Tie! go again.")
+                return result;
+            } else if(result === "User Win"){
+                console.log("Great jobs! User. one point for ya!");
+                userScore++;
+                return result;
+            } else if(result === "CPU Win"){
+                console.log("You lose! one point for Skynet!");
+                cpuScore++;
+                return result;
+            }
         }
+
 
         // rock > scissor > paper > rock and so on
         function gameComparer(user, cpu){
@@ -54,6 +66,10 @@
             }
         }
         // game will play 5 rounds, need logic for that
+        // figure this will just included in main
+        function main(){
+            
+        }
     </script>
 </body>
 </html>
